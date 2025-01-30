@@ -1,14 +1,14 @@
 const btn = document.querySelector('.btn');
-btn.addEventListener("click", () => {
-    // const countryName = user.name.common;
-    const atag = document.createElement('a');
-    atag.href = `${window.location.origin}/index.html`
-    atag.click();
-});
+// btn.addEventListener("click", () => {
+//     // const countryName = user.name.common;
+//     const atag = document.createElement('a');
+//     atag.href = `${window.location.origin}/index.html`
+//     atag.click();
+// });
 
 
 
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(location.search);
 const countryName = params.get("name");
 console.log(countryName); 
 const container = document.querySelector('.container');
