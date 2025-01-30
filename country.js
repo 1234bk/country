@@ -21,7 +21,7 @@ fetch(url)
 .then(data => {
 
     console.log(url);
-    const country = data[2]; 
+    const country = data[0]; 
     console.log(country.name.common);
     console.log(country.population);
     console.log(country.capital[0]);
