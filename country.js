@@ -2,7 +2,7 @@ const btn = document.querySelector('.btn');
 btn.addEventListener("click", () => {
     // const countryName = user.name.common;
     const atag = document.createElement('a');
-    atag.href = `http://127.0.0.1:5500/index.html`
+    atag.href = `${window.location.origin}/index.html`
     atag.click();
 });
 
@@ -106,7 +106,7 @@ const fetchBorderCountries = async () => {
 
           button.addEventListener("click", () => {
             const atag = document.createElement('a');
-            atag.href = `http://127.0.0.1:5500/country.html?name=${commonName}`
+            atag.href = `${window.location.origin}/country.html?name=${commonName}`
             atag.click();
         });
       } catch (error) {

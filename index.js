@@ -18,7 +18,7 @@ const container = document.querySelector('.container');
     card.addEventListener("click", () => {
       const countryName = user.name.common;
       const atag = document.createElement('a');
-      atag.href = `http://127.0.0.1:5500/country.html?name=${countryName}`
+      atag.href = `${window.location.origin}/country.html?name=${countryName}`
       atag.click();
   });
     card.innerHTML = `
