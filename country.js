@@ -11,16 +11,8 @@ fetch(url)
 .then(response => response.json()) // Parse the JSON data
 .then(data => {
 
-    console.log(url);
+
     const country = data[0]; 
-    console.log(country.name.common);
-    console.log(country.population);
-    console.log(country.capital[0]);
-    console.log(country.flags.png); 
-    
-    
-    // const country = data[0]; 
-    // const container = document.querySelector('.container');
     const containerofimg = document.createElement('div'); 
     containerofimg.className = 'containerofimg';
  
@@ -112,6 +104,7 @@ const fetchBorderCountries = async () => {
 fetchBorderCountries();
 })
 .catch(error => console.error('Error fetching JSON:', error));
+
 
 
 
