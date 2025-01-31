@@ -1,8 +1,10 @@
-fetch('https://restcountries.com/v3.1/all')
-.then(response => response.json()) // Parse the JSON data
-.then(data => {
-    
+let countriesData = [];
+function handleData(data) {
+
+console.log(data);
+countriesData = data;
 const container = document.querySelector('.container');
+container.innerHTML = '';
   data.forEach(user => {
     
   
@@ -29,5 +31,39 @@ const container = document.querySelector('.container');
     `;
     container.appendChild(card); // Add the card to the container
   });
-})
+}
+
+// all countries
+fetch('https://restcountries.com/v3.1/all')
+.then(response => response.json()) // Parse the JSON data
+.then(handleData)
 .catch(error => console.error('Error fetching JSON:', error));
+
+
+
+// regions
+document.getElementById("regionSelect").addEventListener("change", function () {
+  const region = this.value; 
+  if (!region) return; // Prevent calling API if no region is selected
+  const container = document.querySelector('.container');
+  container.innerHTML = '';
+  fetch(`https://restcountries.com/v3.1/region/${region}`)
+      .then(response => response.json())
+      .then(handleData)
+      .catch(error => console.error("Error fetching data:", error));
+});
+
+
+// search countries
+const searchInput = document.getElementById("searchInput");
+// const container = document.querySelector('.container');
+
+
+searchInput.addEventListener("input", function () {
+  const searchTerm = this.value.toLowerCase();
+  // container.innerHTML = '';
+  // if (!searchTerm) return;
+  const filteredData = countriesData.filter(country => country.name.common.toLowerCase().includes(searchTerm));
+  // slice-only  max 5 countries 
+  handleData(filteredData);
+});
