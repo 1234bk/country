@@ -24,6 +24,11 @@ body{
     color: rgb(3, 3, 3 , 0.8);
     font-size: 1.3rem;
 }
+.bar a{
+    text-decoration: none;
+    color: rgb(3, 3, 3 , 0.8);
+    font-size: 1.3rem;
+}
 .card{
     background-color: rgb(252, 252, 252);
     height: 23rem;
@@ -57,4 +62,117 @@ body{
     justify-content: center;
     gap: 60px;
     padding: 20px;
+}
+
+
+
+
+
+
+.filters{
+    /* background-color: beige; */
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4rem;
+    margin: 0%;
+
+}
+.search{
+    /* background-color: rgb(19, 202, 31); */
+    height: 2.5rem;
+    width: 15rem;
+    display: flex;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+    
+    color: rgb(3, 3, 3 , 0.5);
+   
+}
+.search i{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+   
+    color: rgb(3, 3, 3 , 1.5);
+}
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size:   1.1rem;
+    
+   }
+
+.region{
+    background-color: rgb(19, 202, 31);
+    height: 2.rem;
+    width: 12rem;
+    display: flex;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-right: 3rem;
+}
+.region select{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: rgb(3, 3, 3 , 0.5);
+}
+
+
+@media (max-width: 520px) {
+    .bar h2{
+        color: rgb(3, 3, 3 , 0.8);
+        font-size: 1rem;
+    }
+    .bar a{
+        text-decoration: none;
+        color: rgb(3, 3, 3 , 0.8);
+        font-size: 1rem;
+    }
+    .filters{
+        display: block;
+        align-items: center;
+        justify-content: start;
+        gap: 2rem;
+        margin: 1rem;
+        padding-top: 1rem;
+    }
+    .search{
+        margin-bottom: 1rem;
+        width: 12rem;
+        font-size: 0.8rem;
+        height: 2.3rem;
+    }
+    .search input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 0.2rem;
+        font-size:   0.8rem;
+        
+       }
+
+       .search i{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+       
+        color: rgb(3, 3, 3 , 1.5);
+    }
+    .region{
+        width: 12rem;
+        font-size: 1rem;
+        height: 2.1rem;
+    }
+
 }
