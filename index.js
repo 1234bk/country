@@ -17,9 +17,8 @@ const container = document.querySelector('.container');
     card.className = 'card';
     card.addEventListener("click", () => {
       const countryName = user.name.common;
-      const atag = document.createElement('a');
-      atag.href = `${window.location.origin}/country.html?name=${countryName}`
-      atag.click();
+      window.location.href = `/country.html?name=${countryName}`;
+
   });
     card.innerHTML = `
       <img src="${user.flags.png}" alt="">
