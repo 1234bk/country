@@ -1,5 +1,6 @@
 :root {
     --bg-color: hsl(0, 0%, 98%) ;
+    --btnbg-color: hsl(0, 3%, 88%);
     --text-color: hsl(200, 15%, 8%);
     --text8-color: var(3, 3, 3 , 0.8);
     --text3-color: rgb(3, 3, 3 , 1.9);
@@ -10,6 +11,7 @@
 /* Dark Mode */
 .dark-mode {
     --bg-color:  hsl(207, 26%, 17%);
+    --btnbg-color:hsl(210, 13%, 39%);
     --text-color:  hsl(0, 0%, 100%);
     /* bar wala */
     --text8-color: hsl(0, 0%, 100%);
@@ -60,6 +62,8 @@ body{
     margin: 2.5rem;
     font-size: 1.2rem;
     padding: 5px;
+    background-color:var(--btnbg-color) ;
+    color: var(--text-color);
 }
 .btn i{
     margin-right: 0.7rem;
@@ -196,7 +200,7 @@ body{
     }
     .details-list h2{
         line-height: 0.9;
-        font-size: 2rem; 
+        font-size: 0.8rem; 
     }
     .border{
         margin-top: -1rem;
@@ -239,8 +243,9 @@ body{
     font-size: 0.9rem;
 }
 .border-btn{
-    
+    background-color:var(--btnbg-color) ;
     font-size: 0.9rem;
+    color: var(--text-color);
     /* gap:rem; */
     /* line-height: 0.1; */
     padding-left: 1rem;
