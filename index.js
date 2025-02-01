@@ -67,3 +67,14 @@ searchInput.addEventListener("input", function () {
   // slice-only  max 5 countries 
   handleData(filteredData);
 });
+
+
+
+
+
+
+
+
+
+
+
